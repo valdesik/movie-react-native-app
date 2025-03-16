@@ -83,7 +83,7 @@ export default function Index() {
             <Image source={images.bg} className="absolute w-full h-full z-0" />
 
             {/* Fixed Header */}
-            <View className="absolute top-0 left-0 right-0 bg-primary z-10 pt-4 pb-4 h-21">
+            <View className="absolute top-0 left-0 right-0  z-10 pt-4 pb-4 h-21">
                 <View className="flex-row justify-between items-center px-4 mt-[50px]">
                     {/* Logo */}
                     <Image source={icons.logo} className="w-12 h-12" />
@@ -99,7 +99,7 @@ export default function Index() {
             </View>
 
             {/* Main Content with Offset */}
-            <View className="flex-1 pt-22">
+            <View className="flex-1 pt-[80px]">
                 {initialLoading ? (
                     <View className="flex-1 justify-center items-center">
                         <ActivityIndicator size="large" color="#FFD700" />
