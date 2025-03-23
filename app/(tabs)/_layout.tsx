@@ -78,22 +78,22 @@ const _Layout = () => {
                     elevation: 5,
                 },
                 tabBarButton: (props) => {
-                    let longPressed = false; // Змінна для відстеження довгого натискання
+                    let longPressed = false;
 
                     return (
                         <Pressable
                             {...props}
                             onPressOut={() => {
-                                props.onPress(); // Перехід завжди відбувається при відпусканні
+                                props.onPress();
                                 if (longPressed) {
-                                    triggerHapticOnPressOut(); // Вібрація при відпусканні тільки після довгого натискання
+                                    triggerHapticOnPressOut();
                                 }
                             }}
                             onLongPress={() => {
-                                longPressed = true; // Позначаємо, що було довге натискання
-                                triggerHapticOnLongPress(); // Вібрація при довгому натисканні
+                                longPressed = true;
+                                triggerHapticOnLongPress();
                             }}
-                            delayLongPress={500} // Час для визначення довгого натискання (500 мс за замовчуванням)
+                            delayLongPress={500}
                             style={{
                                 flex: 1,
                                 justifyContent: 'center',

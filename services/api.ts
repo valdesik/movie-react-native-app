@@ -17,7 +17,7 @@ export const fetchMovies = async ({query, page=1}: { query: string, page? : numb
             headers: TMDB_CONFIG.headers
         });
         const data = await response.json();
-        return data.results
+        return data
     } catch (error) {
         console.error('Error fetching data:', error);
         return null;
